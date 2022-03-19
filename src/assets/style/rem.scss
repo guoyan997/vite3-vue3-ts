@@ -1,0 +1,23 @@
+/**
+ * 响应式尺寸rem方案
+ */
+@use 'sass:math';
+$design_width: 1920; // 设计宽度
+$design_height: 1080; // 设计高度
+
+ @function px2rem($px) {
+   // @return $px / ($design_width / 10) * 1rem;
+   @return math.div($px, math.div($design_width, 10)) * 1rem;
+ }
+ @function rem2px ($rem) {
+   // @return $rem * ($design_width / 10) * 1px;
+   @return $rem * math.div($design_width, 10) * 1px;
+ }
+ @function px2vh ($px) {
+   // @return $px / $design_height * 100vh;
+   @return math.div($px, $design_height) * 100vh;
+ }
+ @function px2vw ($px) {
+   // @return $px / $design_width * 100vw;
+   @return math.div($px, $design_width) * 100vw;
+ }
