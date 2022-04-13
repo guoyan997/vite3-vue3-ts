@@ -4,7 +4,7 @@
  * @Autor: GY
  * @Date: 2022-02-14 15:59:45
  * @LastEditors: GY
- * @LastEditTime: 2022-03-07 14:08:53
+ * @LastEditTime: 2022-04-13 10:21:55
  */
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -15,7 +15,7 @@ import { createPinia } from 'pinia'
 // 重置浏览器默认样式
 import './assets/style/reset.scss'
 // 引入rem设置
-import './utils/flexible'
+import './utils/rem'
 // 引入自动注册公共组件功能
 import autoRegisterComps from './utils/autoRegisterComp'
 // 引入封装的axios
@@ -41,3 +41,8 @@ app.use(router)
 .use(ElementPlus)
 .use(Vue3DraggableResizable)
 .mount('#app')
+
+// 全局统一报错处理方法
+app.config.errorHandler = (err: unknown, vm: Object | null, info : String) => {
+  console.log(JSON.stringify(err) + JSON.stringify(vm) + info)
+}

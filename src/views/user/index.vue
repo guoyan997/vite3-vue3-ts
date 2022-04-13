@@ -4,7 +4,7 @@
  * @Autor: GY
  * @Date: 2022-02-21 17:10:28
  * @LastEditors: GY
- * @LastEditTime: 2022-03-04 18:02:06
+ * @LastEditTime: 2022-04-06 16:33:36
 -->
 <template>
   <div class="user-page">
@@ -36,12 +36,12 @@
   </div>
 </template>
 
-<script lang="ts" >
+<script lang="ts">
 import HelloWorld from '../../components/HelloWorld.vue'
-import { reactive, toRefs, onBeforeMount, onMounted, computed, watchEffect } from 'vue'
+import { defineComponent, reactive, toRefs, onBeforeMount, onMounted, computed, watchEffect } from 'vue'
 import { useStore } from 'vuex'
 
-export default {
+export default defineComponent({
   name: 'UserPage',
   components: {
     HelloWorld
@@ -55,13 +55,13 @@ export default {
     })
     const userStore = useStore()
     const userName = computed(() => userStore.state.user.name)
-    const pageStyle = computed(() => { 
+    const pageStyle = computed(() => {
       const style = { backgroundColor: 'red' }
       return style
     })
     const changeScale = () => {
       data.scale -= 0.1
-    } 
+    }
     watchEffect(() => {
       console.log('*********scale' + data.scale)
     })
@@ -75,7 +75,7 @@ export default {
       changeScale
     }
   }
-}
+})
 </script>
 <style scoped lang="scss">
 .user-page {

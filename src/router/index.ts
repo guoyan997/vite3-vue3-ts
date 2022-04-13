@@ -4,7 +4,7 @@
  * @Autor: GY
  * @Date: 2022-02-21 17:02:43
  * @LastEditors: GY
- * @LastEditTime: 2022-03-10 10:29:54
+ * @LastEditTime: 2022-04-13 11:17:47
  */
 /*
  * :Date: 2022-02-21 17:02:43
@@ -46,6 +46,22 @@ const routes: Array<RouteRecordRaw> = [
     // this generates a separate chunk (user.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "User" */ '../views/charts/index.vue')
+  },
+  {
+    path: '/sky',
+    name: 'sky',
+    // route level code-splitting
+    // this generates a separate chunk (user.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "User" */ '../views/bg/skyBg.vue')
+  },
+  {
+    path: '/rem',
+    name: 'rem',
+    // route level code-splitting
+    // this generates a separate chunk (user.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "User" */ '../views/rem/index.vue')
   },
   {
     path: '/404',

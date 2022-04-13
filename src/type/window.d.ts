@@ -4,7 +4,7 @@
  * @Autor: GY
  * @Date: 2022-02-23 09:04:11
  * @LastEditors: GY
- * @LastEditTime: 2022-02-23 17:22:53
+ * @LastEditTime: 2022-04-08 09:44:58
  */
 interface ILib { 
   rem: number,
@@ -14,5 +14,6 @@ interface ILib {
   px2rem(d: string): string
 }
 declare interface Window {
-  lib: ILib
+  lib: ILib,
+  requestAnimFrame: any
 }

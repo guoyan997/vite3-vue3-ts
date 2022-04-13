@@ -4,7 +4,7 @@
  * @Autor: GY
  * @Date: 2022-02-14 15:59:45
  * @LastEditors: GY
- * @LastEditTime: 2022-02-28 17:14:18
+ * @LastEditTime: 2022-04-13 09:48:35
 -->
 <!--
  * :Date: 2022-02-14 15:59:45
@@ -23,12 +23,16 @@
 
 <style lang="scss">
 #app {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 #nprogress .bar {
   background: red !important; // 自定义页面加载进度条颜色
